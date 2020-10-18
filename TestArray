@@ -1,0 +1,54 @@
+package myCodes;
+import java.util.*;
+public class DDArray {
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		int arr1[][]=new int[3][3];
+		int arr2[][]=new int[3][3];
+		int i,j;
+		System.out.println("Enter elements of first matrix");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				arr1[i][j]=sc.nextInt();
+			}
+		}
+		System.out.println("Enter elemnts of second matrix");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				arr2[i][j]=sc.nextInt();
+			}
+		}
+		int res1[][]=new int[3][3];
+		int res2[][]=new int[3][3];
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				res1[i][j]=arr1[i][j]+arr2[i][j];
+				res2[i][j]=arr1[i][j]*arr2[i][j];
+			}
+		}
+		System.out.println("the result of the two matrix added is as follows:");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.print(res1[i][j]+" ");
+			}
+			System.out.println();
+		}
+		System.out.println("the result of the two matrix multiplied is as follows:");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.print(res2[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+}
